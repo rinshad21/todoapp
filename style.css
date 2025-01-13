@@ -1,0 +1,140 @@
+*{
+
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing:border-box;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(135deg,#101114,#1c1d20,#00FFC4);
+    padding:10px;
+}
+.todo-app{
+    width:100%;
+    max-width:540px;
+    box-shadow: 0 0 100px rgba(0,0,0, 0.5);
+    backdrop-filter: blur(10px);
+    margin:100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    border: 3px solid rgba(255,255,255, 0);
+}
+.todo-app h2{
+    color:#00FFC4;
+    display:flex;
+    margin-bottom:20px;
+   
+}
+.todo-app h2 img{
+    width:40px;
+    margin-left:5px;
+}
+.row{
+    display:flex;
+    align-items: row;
+    justify-content: space-between;
+    background:#edeef0;
+    border-radius: 30px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+#input-box{
+    flex:1;
+}
+button{
+    border:none;
+    outline: none;
+    padding:16px 50px;
+    background: #00FFC4;;
+    color:#1c1d20;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 40px;
+}
+ul li{
+        color: #f8efef;
+        list-style:none;
+        font-size:17px;
+        padding:12px 8px 12px 50px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+
+    }
+ul li::before{
+    content:'';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left:8px;
+}
+ul li.checked{
+    color: #f8efef;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#070707;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    
+}
+ul li span:hover{
+    background: #ff0033;
+}
+.wrapper{
+    width: 700px;
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+@media(max-width:500px){
+    html{
+        font-size:12pt;
+    }
+    .row{
+        flex-direction: column;
+        padding: 0;
+    }
+    #input-box{
+        width:calc(100%-0px);
+        margin-right: 0;
+        padding: 15px;
+        box-sizing: border-box;
+
+    }
+    #add-button{
+        width:100%;
+        margin-top:10px;
+        padding:15px;
+        box-sizing: border-box;
+
+    }
+  
+
+}
